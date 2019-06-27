@@ -1,0 +1,483 @@
+ #include <iostream>
+        using namespace std;
+        int main()
+        {
+              cout<<”Hwelcome to the ops \n”;
+        }
+        #include<iostream>
+using namespace std;
+int main()
+{ 
+ 	int n,i;
+ 	cin>>n;
+ 	for( i=1;i<=n;i++)
+ 	{
+ 		cout<<"@@@@@@@@@@@@@@@@@@@@@";
+ 		cout<<endl;
+ 	}
+
+}
+#include<iostream>
+using namespace std;
+int main()
+{ 
+ 	int n,i,j;
+ 	cin>>n;
+ 	for( i=1;i<=n;i++)
+ 	{ 
+	 	for(int j=1; j<=n; ++j)
+			cout<<"#";
+    	cout<<endl;   
+	}
+
+
+}
+#include<iostream>
+using namespace std;
+int main()
+{ 
+ 	int k,i,j;
+ 	char c;
+ 	cin>>c;
+ 	for( i=1;i<=7;i++)
+ 	{
+		for(int j=1; j<=7-i; j++)
+			cout<<" ";
+    	for(k=1;k<=2*i-1;k++)
+    		cout<<c;
+    	cout<<endl;
+	}
+
+
+}
+#include<iostream>
+using namespace std;
+int main()
+{ 
+	int n,i,j;
+	cout<<"请输入要计算的正方形面积个数"<<endl;
+	cin>>j;
+	cout<<"请输入正方形边长"<<endl;
+	for(i=1;i<=j;i++)
+	{
+		cin>>n;
+		cout<<n*n;
+		cout<<endl;
+	}
+}#include<iostream>
+using namespace std;
+int main()
+{
+ 	int x,a,b,i;
+ 	cout<<"请输入要计算的数组个数"<<endl;
+	cin>>x;
+	cout<<"请输入数组"<<endl;
+ 	for(i=1;i<=x;i++)
+	{
+ 		cin>>a;
+ 		cin>>b;
+ 		cout<<a-b;
+		cout<<endl;
+ 	}
+ }
+//---------------------------------------------------------------------------
+
+//3.2.1字符三角形
+
+//---------------------------------------------------------------------------
+#include<iostream>
+using namespace std;
+int main() {
+        char c;
+        int i,n;
+        cout<<"先输入字符再输入数字"<<endl;
+        for(;1;){
+        	cin>>c>>n;
+            for (i=1;i<=n;i++)
+                cout<<string(n-i,' ')<<string(2*i-1,c)<<endl;
+        }
+}
+//---------------------------------------------------------------------------
+
+//3.2.2字符菱形
+
+//---------------------------------------------------------------------------
+#include<iostream>
+using namespace std;
+int main() {
+        char c;
+        int i,n;
+        cout<<"先输入字符再输入数字"<<endl;
+        for(;1;){
+        	cin>>c>>n;
+            for (i=1;i<=n;i++)
+                cout<<string(n-i,' ')<<string(2*i-1,c)<<endl;
+            for (i=n-1;i>=1;i--)
+                cout<<string(n-i,' ')<<string(2*i-1,c)<<endl;
+        }
+}
+//---------------------------------------------------------------------------
+
+//3.2.3背靠背字符三角形
+
+//---------------------------------------------------------------------------
+#include<iostream>
+using namespace std;
+int main(){ 
+        char c;
+        int i,n;
+        cout<<"先输入字符再输入数字"<<endl;
+        for(;1;){
+        	cin>>c>>n;
+            for (i=1;i<=n;i++)
+                 cout<<string(n-i,' ')<<string(i,c)<<' '<<string(i,c)<<endl;
+        }
+}
+//---------------------------------------------------------------------------
+
+//3.2.4交替字符倒三角形
+
+//---------------------------------------------------------------------------
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+        int i,j,n;
+        cout<<"输入数字"<<endl;
+        for(;1;){
+        	cin>>n;
+        	for (i=n;i>=1;i--){
+        		cout<<string(n-i,' ');
+        	for(j=i-1;j>=1;j--)
+        		cout<<"ST";
+        	cout<<'S'<<endl;
+        	}
+    	}
+}
+//---------------------------------------------------------------------------
+
+//3.2.5格式阵列一
+
+//---------------------------------------------------------------------------
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+        int i,j,k,n;
+        cout<<"输入数字"<<endl;
+        for(;1;){
+        	cin>>n;
+        	for(i=1;i<=n;i++){
+        		cout<<' '<<i<<"  ";
+        		for(j=i-1,k=1;k<=n;k++,j=(j+1)%n)
+        			cout<<"  "<<j;
+        	cout<<endl;
+        	}
+        }
+}
+
+//---------------------------------------------------------------------------
+
+//3.2.6格式阵列二
+
+//---------------------------------------------------------------------------
+#include<iostream>
+#include<string>
+using namespace std;
+int main() {
+        int i,j,k,n;
+        cout<<"输入数字"<<endl;
+        for(;1;){
+        	cin>>n;
+        	for(i=1;i<=n;i++){
+        		for(j=1;j<=n;j++)
+        			cout<<" ("<<i<<","<<j<<')';
+        	cout<<endl;
+        	}
+        }
+}
+//---------------------------------------------------------------------------
+
+//3.3.1 1!到n！的和
+
+//---------------------------------------------------------------------------
+
+#include<iostream>
+using namespace std;
+int main() {
+        int n,sum=0,x=1,i,j;
+        cout<<"请输入数字"<<endl;
+        cin>>n;
+        for(i=1;i<=n;i++){
+                for(j=1,x=1;j<=i;j++)
+                  x=x*j;
+          sum=sum+x;
+        }
+        cout<<sum;
+
+}
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+// 3.3.2 等比数列
+
+//---------------------------------------------------------------------------
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+        int n;
+        double q,x;
+        cout<<"请输入数字n和q"<<endl;
+        for(;1;){
+          cin>>n>>q;
+          x=(1-(pow(q,n+1)))/(1-q);
+          cout<<x<<endl;
+        }
+}
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
+
+//3.3.3 fibonacci数列
+
+//---------------------------------------------------------------------------
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+        int n,i,a,b,x;
+        cout<<"请输入数字n>=0"<<endl;
+        for(;1;){
+        a=0,b=1;
+        cin>>n;
+        if(n==0)
+         cout<<'0';
+                else if(n==1)
+                 cout<<'1';
+                        else{
+                         for(i=1;i<n;i++){
+                          x=a+b;
+                          a=b;
+                          b=x;
+                         }
+                        cout<<x<<endl;
+                        }
+        }
+}
+//---------------------------------------------------------------------------
+
+//3.3.4最大公约数
+
+//---------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+int main()
+{
+ 	int x,y,k,max;
+ 	for(;1;){
+ 		cin>>x>>y;
+ 		k=y;
+ 		if(x>=y)
+ 			k=x;
+ 		for(int i=1;i<=k;i++){
+ 			if(x%i==0&&y%i==0)
+ 				max=i;
+ 		}
+ 		cout<<max<<endl;
+	}
+}
+//---------------------------------------------------------------------------
+
+//3.3.5最小公倍数
+
+//---------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+int main()
+{
+	 int x,y,k,max,min;
+	 cout<<"输入两个数字"<<endl;
+	 for(;1;){
+		 cin>>x>>y;
+		 k=y;
+	 if(x>=y)
+		 k=x;
+	 for(int i=1;i<=k;i++){
+		 if(x%i==0&&y%i==0)
+ 			max=i;
+ 	 }
+		 min=x*y/max;
+		 cout<<min<<endl;
+	 }
+}
+//---------------------------------------------------------------------------
+
+//3.3.6平均数
+
+//---------------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x,n,i;
+	float sum;
+	for(;1;){
+		sum=0.0;
+		cout<<"请输入数字的个数"<<endl;
+		cin>>n;
+		cout<<"请输入数字"<<endl;
+		for(i=1;i<=n;i++){
+			cin>>x;
+			sum+=x;
+		}
+		cout<<sum/(i-1)<<endl;
+	}
+}
+//---------------------------------------------------------------------------
+
+//3.4.1级数问题
+
+//---------------------------------------------------------------------------
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+        int i,n;
+        double x,sum=1.0;
+        for(;1;){
+        	cin>>x;
+        	for(i=1,n=1;i<=10;i++){
+                if(i==0)
+                    n=1;
+                else
+                    n*=i;
+                sum+=pow(-1.0,i+1)*pow(x,i)/n;
+        }
+        	cout<<sum<<endl;
+    	}
+}
+//3.4.2对称三位素数
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x,y=0,i,length,k;
+    for(int m=0;cin>>x;){
+    //cout<<(m++?"\n":"");
+    k=x;
+        for(length=1 ;k/=10;)
+            length++;
+        k=x;
+        if(length!=3)
+            cout<<"No"<<endl;
+        else{
+        	y=(k%10)*100;
+            k/=10;
+            y+=(k%10)*10;
+            k/=10;
+            y+=k;
+        	if(x!=y)
+                cout<<"No"<<endl;
+            else{
+				for(i=2;i<x;i++){
+					if(x%i==0){
+						cout<<"No"<<endl;
+						break;
+					}
+					else if(i+1==x) 
+            				cout<<"Yes"<<endl;
+				}			
+			}
+        }
+    }
+}
+//3.4.3母牛问题
+#include <iostream>
+using namespace std;
+int main()
+{
+    int mum=0,kid1=1,kid2=0,kid3=0,n,m,k1,k2,k3,i;
+    for(;cin>>n;){
+        for(i=1,mum=0,kid1=1,kid2=0,kid3=0;i<=n+1;i++){
+            m=mum;
+            k1=kid1;
+            k2=kid2;
+            k3=kid3;
+
+            mum+=k3;
+            kid1=m;
+            kid2=k1;
+            kid3=k2;
+        }
+        if(n<=2)
+        	cout<<mum+kid1+kid2+kid3<<endl;
+        else
+        	cout<<mum+kid1+kid2+kid3-1<<endl;
+        }
+}
+//3.4.4整数内码
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j,n,num[50];
+    bool exi = false;
+    for(i=0;i<50;i++){
+        if ( !(cin>>num[i]) )
+        {
+            break;
+        }else{
+            int code[32]={0};
+            j=0;
+            int b = num[i];
+            if(b<0){
+                b = 2147483648 - b;
+                code[31] = 1;
+            }
+            while(b){
+                if (b%2)
+                {
+                    code[j++] = 1;
+                }else{
+                    j++;
+                }
+                b /=2;
+            }
+            for (n=31;n>=0;n--)
+            {
+                cout<<code[n];
+            }
+            cout<<"  "<<num[i]<<endl;
+        }   
+}
+//---------------------------------------------------------------------------
+
+//3.4.5整除3/5/7
+
+//---------------------------------------------------------------------------
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main() {
+    int n,k;
+    for(;cin>>n;){
+        k=0;
+        if(n%3==0){
+            cout<<'3'<<' ';
+            k++;
+        }
+        if(n%5==0){
+            cout<<'5'<<' ';
+            k++;
+        }
+        if(n%7==0){
+            cout<<'7'<<' ';
+            k++;
+        }
+            cout<<endl;
+        if(k==0)
+            cout<<"None"<<endl;
+        }
+}
