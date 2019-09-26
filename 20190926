@@ -1,0 +1,33 @@
+827// 20190926C++李金隆.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
+/*该代码已使用GNU General Public License v3.0许可声明，在同一许可下，必须保留版权和许可证通知。当使用修改版本以及原版本时，必须提供修改版本的完整源代码。*/
+/*请阅读完本代码外部许可声明文档或进入该网站阅读LICENSE后使用该代码https://github.com/a1456096194/C-homework/tree/master*/
+/*网站里有时间戳可以查询代码发布时间*///不修改代码直接使用者，概不负责！！！----李金隆
+
+
+#include "pch.h"
+#include <iostream>
+
+using namespace std;
+
+int max(int a, int b) {/*两整数取最大值*/
+	return (a > b ? a : b);//返回if else的简单语句
+}
+int max(int a, int b, int c) {/*三整数取最大值*/
+	return ((a > b ? a : b) > c ? (a > b ? a : b) : c);//if else简单写法嵌套使用
+}
+int max(int a[], int b, int &s) {/*整数数组中取最大值；&s是主函数中a的引用变量*/
+	s = a[0];
+	for (int i = 1; i < b; i++)//把最大值赋值给引用变量s
+		s = (a[i] > s ? a[i] : s);
+	return s;
+}
+int main()
+{
+	cout << max(1, 2) << endl;
+	cout << max(2, 3, 4) << endl;
+	int a = 0;
+	int s[7] = { 3,2,4,7,6,5,8 };
+	max(s, 7, a);
+	cout << a << endl;
+	return 0;
+}
